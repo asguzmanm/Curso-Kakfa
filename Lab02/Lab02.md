@@ -20,5 +20,8 @@
 
 **5. El diagrama del paso 7.**
 
+<img width="3424" height="1045" alt="image" src="https://github.com/user-attachments/assets/ac082171-fd59-4b73-8f44-d1ef4f7ebfb3" />
 
 **6. Un párrafo: ¿por qué KRaft simplifica la operación frente a ZooKeeper en una entidad como la DIAN?**
+
+KRaft simplifica la operación porque elimina la dependencia de ZooKeeper, concentrando la gestión de metadatos directamente en el clúster Kafka, haciendo que la administración sea más sencilla, con menos componentes que monitorear y menos posibilidades de falla.
