@@ -1,8 +1,0 @@
-# **Informe de laboratorio**
-
-**1. Salida del paso 2 con LeaderId y LeaderEpoch.**
-**2. Registros del paso 4 (TOPIC_RECORD y un PARTITION_RECORD).**
-**3. Salidas del paso 5 antes y después de la caída, con el tiempo de elección medido, y la respuesta a la pregunta de los dos nodos.**
-**4. Salida del paso 6 con particiones y offsets, y la del grupo ${EQUIPO}-lab02-lector.**
-**5. El diagrama del paso 7.**
-**6. Un párrafo: ¿por qué KRaft simplifica la operación frente a ZooKeeper en una entidad como la DIAN?**
