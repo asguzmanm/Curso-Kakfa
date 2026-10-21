@@ -1,4 +1,4 @@
-Informe de laboratorio
+# **Informe de laboratorio**
 
 **1. Salida del paso 3 (brokers del clúster).**
    
