@@ -33,11 +33,9 @@
   c. <img width="921" height="40" alt="image" src="https://github.com/user-attachments/assets/578d85d3-bee9-4aec-b702-e81daddb3e29" /><br><br>
 
 **6. Respuesta a:**
- - (a) ¿Qué parámetro habría que cambiar, en qué nivel y con qué herramienta, para que la retención de dian.facturacion.emitida pase a 45 días sin reiniciar?<br>
-   - Rta. Se debe cambiar el parámetro retention.ms a nivel de topic usando kafka-configs.sh.
+ - Análisis: ¿qué combinación elegiría para ingesta masiva de facturación y cuál para un flujo de alertas? Justifique con sus cifras.
+   - Rta. Para ingesta masiva de facturación elegiría linger.ms=100 y compression=zstd, ya que fue la combinación con mejor rendimiento (30.101 ev/s). Para un flujo de alertas elegiría linger.ms=0, porque prioriza la menor latencia posible aunque el throughput sea menor.
      
- - (b) ¿Por qué la cuota no produce errores en el cliente sino solo lentitud?<br>
-   - Rta. Porque Kafka aplica throttling en lugar de rechazar los mensajes, permite que el broker los siga aceptando, pero reduce la tasa de envío para que el cliente no supere la cuota configurada.
-     
- - (c) ¿por qué en AWS compartido usamos topics con prefijo por equipo?<br>
-   - Rta. Porque todos los equipos trabajan sobre el mismo clúster. Entonces el prefijo permite identificar los topics de cada grupo, evita conflictos e interferencias con los recursos de otro.
+ - Errores observados en el paso 4 y comportamiento del cliente.
+ - Conteo del paso 5 y explicación.
+ - Enlace a la rama con el código.
