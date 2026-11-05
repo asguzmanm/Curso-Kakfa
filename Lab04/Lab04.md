@@ -26,6 +26,11 @@
 <img width="1406" height="83" alt="image" src="https://github.com/user-attachments/assets/0e1f19c0-331b-4e92-ac68-087dd7ee789d" /><br>
 
 **6. Respuesta a:**
- - (a) ¿Qué parámetro habría que cambiar, en qué nivel y con qué herramienta, para que la retención de dian.facturacion.emitida pase a 45 días sin reiniciar?
- - (b) ¿Por qué la cuota no produce errores en el cliente sino solo lentitud?
- - (c) ¿por qué en AWS compartido usamos topics con prefijo por equipo?
+ - (a) ¿Qué parámetro habría que cambiar, en qué nivel y con qué herramienta, para que la retención de dian.facturacion.emitida pase a 45 días sin reiniciar?<br>
+   - Rta. Se debe cambiar el parámetro retention.ms a nivel de topic usando kafka-configs.sh.
+     
+ - (b) ¿Por qué la cuota no produce errores en el cliente sino solo lentitud?<br>
+   - Rta. Porque Kafka aplica throttling en lugar de rechazar los mensajes, permite que el broker los siga aceptando, pero reduce la tasa de envío para que el cliente no supere la cuota configurada.
+     
+ - (c) ¿por qué en AWS compartido usamos topics con prefijo por equipo?<br>
+   - Rta. Porque todos los equipos trabajan sobre el mismo clúster. Entonces el prefijo permite identificar los topics de cada grupo, evita conflictos e interferencias con los recursos de otro.
