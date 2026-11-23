@@ -1,4 +1,4 @@
-<img width="921" height="156" alt="image" src="https://github.com/user-attachments/assets/d2221277-1ee8-4e7f-99a4-5763fee99554" /># **Informe de laboratorio**
+# **Informe de laboratorio**
 
 **Prerrequisitos**
 
