@@ -41,4 +41,4 @@ Cambian los lags, dejan de crecer y empiezan a bajar lentamente. Se cambia a 6 c
 
 **7. Respuesta a:**
  - Relación con un flujo de su dependencia: ¿cuántas particiones y consumidores propondría y qué umbral de lag alertaría?
-   - Rta. 
+   - Rta. Para un flujo de mi dependencia propondría 6 particiones y 3 consumidores inicialmente, con posibilidad de escalar hasta 6 consumidores según la carga. Configuraría una alerta cuando el consumer lag supere 10.000 mensajes durante varios minutos, ya que indicaría que el consumo no está alcanzando la velocidad de producción.
