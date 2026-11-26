@@ -38,10 +38,13 @@ Se esta enviando el nuevo productor con 5, pero con un valor En Tramite, y como 
 
 **7. Respuesta a:**
  - (a) ¿qué impide el enum?
-   - Rta.
+   - Rta. Impide que se envíen valores diferentes a los definidos en el esquema, evitando errores de escritura o estados no válidos.
  - (b) ¿por qué solo viaja el ID?
-   - Rta.
+   - Rta. Porque enviar el esquema completo en cada mensaje aumentaría innecesariamente su tamaño. Con el ID, el consumidor puede consultar el esquema en Schema Registry cuando lo necesite.
  - (c) ¿qué habría pasado en la sesión 7, con JSON sin esquema, al producir EN_TRAMITE?
-   - Rta.
+   - Rta. El mensaje probablemente se habría enviado sin problemas, ya que no existía una validación que controlara los valores permitidos para ese campo.
  - (d) proponga dos campos que agregaría al esquema para su propio dominio y redacte su doc
    - Rta. 
+     - cod_dependencia: Código de la dependencia responsable de generar o procesar el evento.
+     - usuario_proceso: Identificador del usuario o proceso que realizó la última acción sobre el registro.
+
